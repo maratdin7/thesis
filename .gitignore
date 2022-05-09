@@ -40,5 +40,6 @@
 *.nls
 *.pdf
 .idea
+out
 thesis.iml
 !pdf/thesis.pdf
