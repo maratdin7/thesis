@@ -36,17 +36,21 @@
 % \renewcommand{\tocchapterfont}{}
 
 % Релизная версия 
-\newcommand{\isRelease}{enable}
+\newcommand{\isRelease}{}
 % \newcommand{\isRelease}{disable}
 
 % Настройка todo
-
 \newcommand{\mytodo}[1]{\todo[linecolor=orange,backgroundcolor=orange!25,bordercolor=orange,\isRelease,inline]{TODO #1}}
 \newcommand{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,\isRelease,#1]{#2}}
 \newcommand{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,\isRelease,#1]{#2}}
 \newcommand{\info}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,\isRelease,#1]{#2}}
 \newcommand{\improvement}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,\isRelease,#1]{#2}}
 \newcommand{\shadowtodo}[1]{\todo[disable]{#1}}
+%
+
+% Настройка autoref
+\renewcommand{\figureautorefname}{рис.}
+\renewcommand{\tableautorefname}{табл.}
 %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
