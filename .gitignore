@@ -39,3 +39,6 @@
 *.tdo
 *.nls
 *.pdf
+.idea
+thesis.iml
+!pdf/thesis.pdf
