@@ -1,0 +1,75 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{TMP}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mytodo{Проблема с примерами}
+
+\section{TMP-1}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{code_analysis_bugs}
+    \caption{Рекомендации по проведению исследований в рамках диссертации}%
+    \label{fig:how-to-do-research}
+\end{figure}
+
+\begin{table}
+% Для таблиц с multirow и multicol необходимо вручную указать сдвиг для caption
+    \captionsetup{skip=5pt}
+    \caption{Example}
+    \centering
+    \begin{tabular}{|r|c|c|c|c|c|c|}
+        \hline
+        \multirow{2}{*}{}
+        & \multicolumn{2}{c|}{LLVM IR}
+        & \multicolumn{2}{c|}{PS}
+        & \multicolumn{2}{c|}{AI} \\ \cline{2-7}
+        & SAT    & UNSAT   & SAT    & UNSAT   & SAT    & UNSAT   \\ \hline
+        beanstalkd & 356    & 252     & 360    & 161     & 360    & 247     \\ \hline
+        clib       & 599    & 258     & 960    & 234     & 960    & 449     \\ \hline
+    \end{tabular}
+    \label{tab:checkresults}
+\end{table}
+
+
+
+\blindtext
+
+hello\autoref{tab:checkresults} It is of great importance that you use correct references in your
+dissertation\ref{sec:инициализации-в-языке-swift} esent studies show that it can increase the chances of successful defense
+by as much as 3,17 percent~\cite{russian, ANTLR, java-book}.
+
+\begin{table}[H]
+    \caption{Название таблицы}
+    \begin{center}
+        \begin{tabular}{|l|l|}
+            \hline
+            top left & top right\\ \hline
+            bot left & bot right\\ \hline
+        \end{tabular}
+        \label{tabular:tab_examp}
+    \end{center}
+\end{table}
+
+You can use all kinds of abbreviations that don't mean anything, but add
+a false sense of importance and significance to your work. Some of these
+abbreviations are:
+%
+\begin{itemize*}
+    \item eXtensible Markup Language~(XML)
+    \item JavaScript Object Notation~(JSON)
+    \item Yet Another Markup Language~(YAML)
+\end{itemize*}
+%
+\nomenclature{XML}{eXtensible Markup Language}
+\nomenclature{JSON}{JavaScript Object Notation}
+\nomenclature{YAML}{Yet Another Markup Language}
+
+\begin{table}
+    \captionsetup{skip=5pt}
+    \caption{Решетка замечательности аббревиатур}
+    \centering
+    XML < JSON < YAML
+\end{table}
+
+\Blindtext
