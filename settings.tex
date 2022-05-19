@@ -8,28 +8,69 @@
 \sloppy
 
 % Настройка листингов
+
+% Настройка подсветки для Kotlin
+\lstdefinelanguage{Kotlin}{
+    comment=[l]{//},
+    emph={filter, first, firstOrNull, forEach, lazy, map, mapNotNull, println},
+    keywords={!in, !is, abstract, actual, annotation, as, as?, break, by, catch, class, companion, const, constructor, continue, crossinline, data, delegate, do, dynamic, else, enum, expect, external, false, field, file, final, finally, for, fun, get, if, import, in, infix, init, inline, inner, interface, internal, is, lateinit, noinline, null, object, open, operator, out, override, package, param, private, property, protected, public, receiveris, reified, return, return@, sealed, set, setparam, super, suspend, tailrec, this, throw, true, try, typealias, typeof, val, var, vararg, when, where, while},
+    morecomment=[s]{/*}{*/},
+    morestring=[b]",
+    morestring=[s]{"""*}{*"""},
+    ndkeywords={@Deprecated, @JvmField, @JvmName, @JvmOverloads, @JvmStatic, @JvmSynthetic, Array, Byte, Double, Float, Int, Integer, Iterable, Long, Runnable, Short, String, Any, Unit, Nothing},
+    sensitive=true,
+}
+
+\lstdefinestyle{Koltin}{
+    texcl=true,
+    language={Kotlin},
+}
+
+% Настройка подсветки для Scala
+\lstdefinelanguage{Scala}{
+    morekeywords={abstract,case,catch,class,def,%
+    do,else,extends,false,final,finally,%
+    for,if,implicit,import,match,mixin,%
+    new,null,object,override,package,%
+    private,protected,requires,return,sealed,%
+    super,this,throw,trait,true,try,%
+    type,val,var,while,with,yield},
+    otherkeywords={=>,<-,<\%,<:,>:,\#,@},
+    sensitive=true,
+    ndkeywords={@Deprecated, @JvmField, @JvmName, @JvmOverloads, @JvmStatic, @JvmSynthetic, Array, Byte, Double, Float, Int, Integer, Iterable, Long, Runnable, Short, String, Any, Unit, Nothing},
+    morecomment=[l]{//},
+    morecomment=[n]{/*}{*/},
+    morestring=[b]",
+    morestring=[b]',
+    morestring=[b]"""
+}
+
+\lstdefinestyle{Scala}{
+    texcl=true,
+    language={Scala},
+}
+
 \renewcommand{\lstlistingname}{Листинг}
 \lstset{
-	frame=single, % adds a frame around the code
-	rulesepcolor=\color{gray},
-	rulecolor=\color{black},
-	breaklines=true,
-	xleftmargin=2em,
-	extendedchars={true},
-	inputencoding={utf8},
-	basicstyle={\ttfamily \scriptsize},
-	keywordstyle={\rmfamily \bfseries},
-	commentstyle={\rmfamily \itshape},
-	tabsize={2},
-	numbers={left},
-	frame={single},
-	showstringspaces={false},
+    frame=single, % adds a frame around the code
+    rulesepcolor=\color{gray},
+    rulecolor=\color{black},
+    breaklines=true,
+    xleftmargin=2em,
+    extendedchars={true},
+    inputencoding={utf8},
+    basicstyle={\ttfamily \scriptsize},
+    keywordstyle={\color{NavyBlue}\bfseries},
+    identifierstyle=\color{black},
+    commentstyle={\color{gray}\ttfamily},
+    stringstyle={\color{ForestGreen}\ttfamily},
+    emphstyle={\color{OrangeRed}},
+    tabsize={2},
+    numbers={left},
+    frame={single},
+    showstringspaces={false},
 }
-\lstdefinestyle{java}{
-	breaklines={true},
-	texcl=true,
-	language={Java},
-}
+
 \input{listings_cyr_hack}
 
 % Настройка стиля оглавления
@@ -40,12 +81,13 @@
 % \newcommand{\isRelease}{disable}
 
 % Настройка todo
-\newcommand{\mytodo}[1]{\todo[linecolor=orange,backgroundcolor=orange!25,bordercolor=orange,\isRelease,inline]{TODO #1}}
-\newcommand{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,\isRelease,#1]{#2}}
-\newcommand{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,\isRelease,#1]{#2}}
-\newcommand{\info}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,\isRelease,#1]{#2}}
-\newcommand{\improvement}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,\isRelease,#1]{#2}}
-\newcommand{\shadowtodo}[1]{\todo[disable]{#1}}
+
+\newcommand{\mytodo}[1]{\todo[linecolor=orange,backgroundcolor=orange!25,bordercolor=orange,inline,\isRelease]{TODO #1}}
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1,\isRelease]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1,\isRelease]{#2}}
+\newcommandx{\info}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1,\isRelease]{#2}}
+\newcommandx{\improvement}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1,\isRelease]{#2}}
+\newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
 %
 
 % Настройка autoref
